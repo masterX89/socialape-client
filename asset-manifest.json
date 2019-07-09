@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/socialape-client/static/css/main.a4e08f61.chunk.css",
-    "main.js": "/socialape-client/static/js/main.43b2ed94.chunk.js",
-    "main.js.map": "/socialape-client/static/js/main.43b2ed94.chunk.js.map",
+    "main.js": "/socialape-client/static/js/main.7370ea29.chunk.js",
+    "main.js.map": "/socialape-client/static/js/main.7370ea29.chunk.js.map",
     "runtime~main.js": "/socialape-client/static/js/runtime~main.cfff2d5c.js",
     "runtime~main.js.map": "/socialape-client/static/js/runtime~main.cfff2d5c.js.map",
     "static/js/2.d668d6e8.chunk.js": "/socialape-client/static/js/2.d668d6e8.chunk.js",
     "static/js/2.d668d6e8.chunk.js.map": "/socialape-client/static/js/2.d668d6e8.chunk.js.map",
     "index.html": "/socialape-client/index.html",
-    "precache-manifest.88c6fdf8732ee3e84b4779432107533b.js": "/socialape-client/precache-manifest.88c6fdf8732ee3e84b4779432107533b.js",
+    "precache-manifest.a1407630d88dd3857647d748b8dac280.js": "/socialape-client/precache-manifest.a1407630d88dd3857647d748b8dac280.js",
     "service-worker.js": "/socialape-client/service-worker.js",
     "static/css/main.a4e08f61.chunk.css.map": "/socialape-client/static/css/main.a4e08f61.chunk.css.map"
   }
