@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/socialape-client/static/css/main.2cce8147.chunk.css",
+    "main.js": "/socialape-client/static/js/main.f9d57d56.chunk.js",
+    "main.js.map": "/socialape-client/static/js/main.f9d57d56.chunk.js.map",
+    "runtime~main.js": "/socialape-client/static/js/runtime~main.cfff2d5c.js",
+    "runtime~main.js.map": "/socialape-client/static/js/runtime~main.cfff2d5c.js.map",
+    "static/js/2.34b4fde6.chunk.js": "/socialape-client/static/js/2.34b4fde6.chunk.js",
+    "static/js/2.34b4fde6.chunk.js.map": "/socialape-client/static/js/2.34b4fde6.chunk.js.map",
+    "index.html": "/socialape-client/index.html",
+    "precache-manifest.75cd61f99fce50a29efd9d05894d07af.js": "/socialape-client/precache-manifest.75cd61f99fce50a29efd9d05894d07af.js",
+    "service-worker.js": "/socialape-client/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/socialape-client/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/socialape-client/static/media/logo.5d5d9eef.svg"
+  }
+}
