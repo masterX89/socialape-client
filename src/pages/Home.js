@@ -6,9 +6,12 @@ import {FIREBASE_CORE_HOST} from '../constants/Constants';
 import Scream from '../components/Scream';
 
 class Home extends Component {
-    state = {
-        screams: null
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            screams: null
+        };
+    }
 
     componentDidMount() {
         axios.get(`${FIREBASE_CORE_HOST}/screams`)
