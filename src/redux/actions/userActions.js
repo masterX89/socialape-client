@@ -54,6 +54,15 @@ export const signupUser = (newUserData, history) => (dispatch) => {
         })
 };
 
+export const uploadImage = (formData) => (dispatch) => {
+    dispatch({type: LOADING_USER});
+    axios.post(`${FIREBASE_CORE_HOST}/user/image`, formData)
+        .then(() => {
+            dispatch(getUserData());
+        })
+        .catch(err => console.log(err));
+};
+
 const setAuthorizationHeader = (token) => {
     const FBIdToken = `Bearer ${token}`;
     localStorage.setItem('FBIdToken', FBIdToken);
