@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import AppIcon from '../images/icon.jpg';
-import axios from 'axios';
-import {FIREBASE_CORE_HOST} from '../constants/Constants';
 import {Link} from 'react-router-dom';
 
 // MUI stuff
