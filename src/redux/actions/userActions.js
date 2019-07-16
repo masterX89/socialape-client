@@ -1,4 +1,4 @@
-import {SET_USER, SET_ERRORS, CLEAR_ERRORS, LOADING_UI, SET_UNAUTHENTICATED} from "../types";
+import {SET_USER, SET_ERRORS, CLEAR_ERRORS, LOADING_UI, SET_UNAUTHENTICATED, LOADING_USER} from "../types";
 import axios from "axios";
 import {FIREBASE_CORE_HOST} from "../../constants/Constants";
 
@@ -26,6 +26,7 @@ export const logoutUser = () => (dispatch) => {
 };
 
 export const getUserData = () => (dispatch) => {
+    dispatch({type: LOADING_USER});
     axios.get(`${FIREBASE_CORE_HOST}/user`)
         .then(res => {
             dispatch({

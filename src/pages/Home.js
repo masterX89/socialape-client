@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import {FIREBASE_CORE_HOST} from '../constants/Constants';
 
 import Scream from '../components/Scream';
-
+import Profile from '../components/Profile';
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -36,7 +36,7 @@ class Home extends Component {
                     {recentScreamsMarkup}
                 </Grid>
                 <Grid item sm={4} xs={12}>
-                    <p>Profile</p>
+                    <Profile />
                 </Grid>
             </Grid>
         );
