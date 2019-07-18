@@ -21,7 +21,7 @@ export const getScreams = () => (dispatch) => {
 };
 
 export const likeScream = (screamId) => (dispatch) => {
-    axios.get(`${FIREBASE_CORE_HOST}/${screamId}/like`)
+    axios.get(`${FIREBASE_CORE_HOST}/scream/${screamId}/like`)
         .then(res => {
             dispatch({
                 type: LIKE_SCREAM,
@@ -34,7 +34,7 @@ export const likeScream = (screamId) => (dispatch) => {
 };
 
 export const unlikeScream = (screamId) => (dispatch) => {
-    axios.get(`${FIREBASE_CORE_HOST}/${screamId}/unlike`)
+    axios.get(`${FIREBASE_CORE_HOST}/scream/${screamId}/unlike`)
         .then(res => {
             dispatch({
                 type: UNLIKE_SCREAM,
