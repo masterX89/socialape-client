@@ -1,4 +1,13 @@
-import {SET_SCREAMS, LOADING_DATA, LIKE_SCREAM, UNLIKE_SCREAM, DELETE_SCREAM} from "../types";
+import {
+    SET_SCREAMS,
+    POST_SCREAM,
+    LOADING_DATA,
+    LIKE_SCREAM,
+    UNLIKE_SCREAM,
+    DELETE_SCREAM,
+    LOADING_UI,
+    SET_ERRORS, CLEAR_ERRORS
+} from "../types";
 import axios from "axios";
 import {FIREBASE_CORE_HOST} from "../../constants/Constants";
 
@@ -17,6 +26,27 @@ export const getScreams = () => (dispatch) => {
                 type: SET_SCREAMS,
                 payload: []
             });
+        })
+};
+
+export const postScream = (newScream) => (dispatch) => {
+    dispatch({type: LOADING_UI});
+    axios.post(`${FIREBASE_CORE_HOST}/scream`, newScream)
+        .then((res) => {
+            dispatch({
+                type: POST_SCREAM,
+                payload: res.data
+            });
+            dispatch({
+                type: CLEAR_ERRORS
+            })
+        })
+        .catch(err => {
+            console.log(err);
+            dispatch({
+                type: SET_ERRORS,
+                payload: err.response.data
+            })
         })
 };
 
@@ -57,4 +87,8 @@ export const deleteScream = (screamId) => (dispatch) => {
         .catch(err => {
             console.log(err);
         })
+};
+
+export const clearErrors = () => (dispatch) => {
+    dispatch({type: CLEAR_ERRORS})
 };
