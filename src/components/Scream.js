@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
 import MyButton from "../util/MyButton";
-import DeleteScream from '../components/DeleteScream';
+import DeleteScream from './DeleteScream';
+import ScreamDialog from './ScreamDialog';
 
 // Redux
 import {connect} from "react-redux";
@@ -93,6 +94,7 @@ class Scream extends Component {
                         <ChatIcon color='primary'/>
                     </MyButton>
                     <span>{commentCount} Comments</span>
+                    <ScreamDialog screamId={screamId} userHandle={userHandle}/>
                 </CardContent>
             </Card>
         );
