@@ -1,11 +1,11 @@
 import React, {Component, Fragment} from 'react';
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
-import MyButton from "../util/MyButton";
+import MyButton from "../../util/MyButton";
 
 // Redux
 import {connect} from "react-redux";
-import {deleteScream} from "../redux/actions/dataActions";
+import {deleteScream} from "../../redux/actions/dataActions";
 
 // dayjs
 import dayjs from 'dayjs';
