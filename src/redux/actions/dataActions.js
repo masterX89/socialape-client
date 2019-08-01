@@ -9,7 +9,8 @@ import {
     LOADING_UI,
     STOP_LOADING_UI,
     SET_ERRORS,
-    CLEAR_ERRORS
+    CLEAR_ERRORS,
+    SUBMIT_COMMENT
 } from "../types";
 import axios from "axios";
 import {FIREBASE_CORE_HOST} from "../../constants/Constants";
@@ -55,9 +56,7 @@ export const postScream = (newScream) => (dispatch) => {
                 type: POST_SCREAM,
                 payload: res.data
             });
-            dispatch({
-                type: CLEAR_ERRORS
-            })
+            dispatch(clearErrors());
         })
         .catch(err => {
             console.log(err);
@@ -91,6 +90,21 @@ export const unlikeScream = (screamId) => (dispatch) => {
         })
         .catch(err => {
             console.log(err);
+        })
+};
+
+export const submitComment = (screamId, commentData) => (dispatch) => {
+    axios.post(`${FIREBASE_CORE_HOST}/scream/${screamId}/comment`, commentData)
+        .then(res => {
+            dispatch({
+                type: SUBMIT_COMMENT,
+                payload: res.data
+            });
+            dispatch(clearErrors());
+        })
+        .catch(err => {
+            console.log(err);
+            dispatch({type: SET_ERRORS, payload: err.response.data});
         })
 };
 
