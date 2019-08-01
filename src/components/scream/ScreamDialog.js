@@ -28,10 +28,11 @@ const styles = (theme) => ({
     invisibleSeparator: theme.invisibleSeparator,
     visibleSeparator: theme.visibleSeparator,
     profileImage: {
-        maxWidth: 200,
-        maxHeight: 200,
-        borderRadius: '50%',
+        width: 200,
+        height: 200,
         objectFit: 'cover',
+        maxWidth: '100%',
+        borderRadius: '50%',
     },
     dialogContent: {
         padding: 20
