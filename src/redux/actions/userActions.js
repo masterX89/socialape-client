@@ -53,7 +53,7 @@ export const signupUser = (newUserData, history) => (dispatch) => {
             });
         })
 };
-
+// TODO: 更换头像的同时更新scream头像
 export const uploadImage = (formData) => (dispatch) => {
     dispatch({type: LOADING_USER});
     axios.post(`${FIREBASE_CORE_HOST}/user/image`, formData)

@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import dayjs from 'dayjs';
 
-// Redux
-import {connect} from 'react-redux';
-
 // MUI stuff
 import withStyles from '@material-ui/core/styles/withStyles';
 import Grid from '@material-ui/core/Grid';
@@ -16,10 +13,11 @@ const styles = (theme) => ({
     invisibleSeparator: theme.invisibleSeparator,
     visibleSeparator: theme.visibleSeparator,
     commentImage: {
-        maxWidth: '100%',
+        width: 100,
         height: 100,
-        borderRadius: '50%',
         objectFit: 'cover',
+        maxWidth: '100%',
+        borderRadius: '50%',
     },
     commentData: {
         marginLeft: 20
