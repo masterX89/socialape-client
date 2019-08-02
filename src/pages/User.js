@@ -14,11 +14,14 @@ import Grid from '@material-ui/core/Grid';
 
 class User extends Component {
     state = {
-        profile: null
+        profile: null,
+        screamIdParam: null
     };
 
     componentDidMount() {
         const handle = this.props.match.params.handle;
+        const screamId = this.props.match.params.screamId;
+        if (screamId) this.setState({screamIdParam: screamId});
         this.props.getUserData(handle);
         axios.get(`${FIREBASE_CORE_HOST}/user/${handle}`)
             .then(res => {
@@ -29,14 +32,22 @@ class User extends Component {
 
     render() {
         // TODO: 解决在用户界面中，跳转其他用户的问题
-        console.log('是否渲染');
         const {screams, loading} = this.props.data;
+        const {screamIdParam} = this.state;
         let screamsMarkup = !loading ? screams.length === 0 ? (
-            <p>No screams from this user</p>
-        ) : (
-            screams.map(scream => <Scream key={scream.screamId} scream={scream}/>
-            )
-        ) : <p>Loading...</p>;
+                <p>No screams from this user</p>
+            ) : !screamIdParam ? (
+                screams.map(scream => <Scream key={scream.screamId} scream={scream}/>
+                )
+            ) :
+            (
+                screams.map(scream => {
+                    if (scream.screamId !== screamIdParam)
+                        return <Scream key={scream.screamId} scream={scream}/>;
+                    else return <Scream key={scream.screamId} scream={scream} openDialog={true}/>
+                })
+            ) :
+            <p>Loading...</p>;
         return (
             <Grid container spacing={2}>
                 <Grid item sm={8} xs={12}>

@@ -50,7 +50,8 @@ class App extends Component {
                                 <Route exact path="/" component={Home}/>
                                 <AuthRoute path="/login" component={Login}/>
                                 <AuthRoute path="/signup" component={Signup}/>
-                                <Route path="/users/:handle" component={User}/>
+                                <Route exact path="/users/:handle" component={User}/>
+                                <Route exact path='/users/:handle/scream/:screamId' component={User}/>
                             </Switch>
                         </div>
                     </Router>
