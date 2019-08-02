@@ -66,7 +66,7 @@ class ScreamDialog extends Component {
             this.handleOpen();
         }
     }
-
+    // TODO: 逻辑还需要优化，从notifications中进入
     handleOpen = () => {
         let oldPath = window.location.pathname;
         const {userHandle, screamId} = this.props;
