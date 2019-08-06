@@ -1,16 +1,17 @@
 {
   "files": {
     "main.css": "/socialape-client/static/css/main.7f1c97fc.chunk.css",
-    "main.js": "/socialape-client/static/js/main.263a2c3e.chunk.js",
-    "main.js.map": "/socialape-client/static/js/main.263a2c3e.chunk.js.map",
+    "main.js": "/socialape-client/static/js/main.d12066ae.chunk.js",
+    "main.js.map": "/socialape-client/static/js/main.d12066ae.chunk.js.map",
     "runtime~main.js": "/socialape-client/static/js/runtime~main.cfff2d5c.js",
     "runtime~main.js.map": "/socialape-client/static/js/runtime~main.cfff2d5c.js.map",
-    "static/js/2.8dce1a2f.chunk.js": "/socialape-client/static/js/2.8dce1a2f.chunk.js",
-    "static/js/2.8dce1a2f.chunk.js.map": "/socialape-client/static/js/2.8dce1a2f.chunk.js.map",
+    "static/js/2.541e83bb.chunk.js": "/socialape-client/static/js/2.541e83bb.chunk.js",
+    "static/js/2.541e83bb.chunk.js.map": "/socialape-client/static/js/2.541e83bb.chunk.js.map",
     "index.html": "/socialape-client/index.html",
-    "precache-manifest.3cdeac4331857e4c8c373a8a0cd55c9d.js": "/socialape-client/precache-manifest.3cdeac4331857e4c8c373a8a0cd55c9d.js",
+    "precache-manifest.12023b4ace7b24b7e2e8bfdf80fde0df.js": "/socialape-client/precache-manifest.12023b4ace7b24b7e2e8bfdf80fde0df.js",
     "service-worker.js": "/socialape-client/service-worker.js",
     "static/css/main.7f1c97fc.chunk.css.map": "/socialape-client/static/css/main.7f1c97fc.chunk.css.map",
-    "static/media/icon.jpg": "/socialape-client/static/media/icon.9a85a5b9.jpg"
+    "static/media/icon.jpg": "/socialape-client/static/media/icon.9a85a5b9.jpg",
+    "static/media/no-img.png": "/socialape-client/static/media/no-img.b6681619.png"
   }
 }
