@@ -5,6 +5,9 @@ import Scream from '../components/scream/Scream';
 import {FIREBASE_CORE_HOST} from "../constants/Constants";
 import StaticProfile from '../components/profile/StaticProfile';
 
+import ScreamSkeleton from "../util/ScreamSkeleton";
+import ProfileSkeleton from "../util/ProfileSkeleton";
+
 // Redux
 import {connect} from 'react-redux';
 import {getUserData} from "../redux/actions/dataActions";
@@ -47,14 +50,16 @@ class User extends Component {
                     else return <Scream key={scream.screamId} scream={scream} openDialog={true}/>
                 })
             ) :
-            <p>Loading...</p>;
+            (
+                <ScreamSkeleton/>
+            );
         return (
             <Grid container spacing={2}>
                 <Grid item sm={8} xs={12}>
                     {screamsMarkup}
                 </Grid>
                 <Grid item sm={4} xs={12}>
-                    {this.state.profile === null ? (<p>Loading profile</p>) : (
+                    {this.state.profile === null ? (<ProfileSkeleton/>) : (
                         <StaticProfile profile={this.state.profile}/>)}
                 </Grid>
             </Grid>
